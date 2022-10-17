@@ -1,6 +1,0 @@
-click
-typer
-rich
-emoji
-watchdog
-PyYAML

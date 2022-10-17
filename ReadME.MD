@@ -12,3 +12,12 @@ pip install -r requirements.txt
 ```
 pip install --editable .
 ```
+
+#### Running the cli
+```
+python3 gen <kwargs>
+```
+## OR
+```
+gen <kwargs>
+```
