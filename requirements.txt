@@ -1,0 +1,8 @@
+PyYAML
+watchdog
+rich
+typer
+click
+pymysql
+pyinstaller
+ruamel.yaml
