@@ -1,0 +1,20 @@
+networks:
+- image_name_network:
+  - driver: bridge
+services:
+- new_image:
+  - environment:
+    - POSTGRES_PASSWORD: a1128f69-e6f7-4e93-a2df-3d4db6030abc
+      POSTGRES_USER: postgres
+    'image: postgres': 12
+    mem_limit: 1536MB
+    mem_reservation: 1G
+    networks:
+    - image_name_network
+    ports:
+    - 5442:5432
+    volumes:
+    - ./db-data/:/var/lib/postgresql/data/
+version: 2.3
+volumes:
+- db-data: postgres

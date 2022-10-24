@@ -1,8 +1,15 @@
-PyYAML
-watchdog
-rich
-typer
-click
-pymysql
-pyinstaller
-ruamel.yaml
+altgraph==0.17.3
+click==8.1.3
+commonmark==0.9.1
+emoji==2.1.0
+-e git+https://github.com/shadmeoli/Generate.git@deb0276e04b8ff6e80e21a08fd490cc915f7843e#egg=gen
+Pygments==2.13.0
+pyinstaller==5.5
+pyinstaller-hooks-contrib==2022.10
+PyMySQL==1.0.2
+PyYAML==6.0
+rich==12.6.0
+ruamel.yaml==0.17.21
+ruamel.yaml.clib==0.2.6
+typer==0.6.1
+watchdog==2.1.9

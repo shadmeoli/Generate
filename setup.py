@@ -16,6 +16,6 @@ setup(
 	],
 	entry_points='''
 	[console_scripts]
-	gen=gen
+	gen=gen:app
 	'''
 )

@@ -1,2 +1,2 @@
 [console_scripts]
-gen = gen
+gen = gen:app

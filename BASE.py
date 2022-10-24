@@ -22,9 +22,8 @@ from typing import Optional
 # Yaml loaders and dumpers
 import yaml
 from yaml import Loader
-from ruamel.yaml.main import \
-    round_trip_load as yaml_load, \
-    round_trip_dump as yaml_dump
+from ruamel.yaml.main import round_trip_load as yaml_load
+from ruamel.yaml.main import round_trip_dump as yaml_dump
 # Yaml commentary
 from ruamel.yaml.comments import \
     CommentedMap as OrderedDict, \

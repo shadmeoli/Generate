@@ -57,28 +57,24 @@ class EnvConfigs:
 # writing to database for subscriber to keep
 # tack of the number of times the have create an app
 @lru_cache
-class DatabaseOperations(ComputerDetails):
+class DatabaseOperations:
 
     def __init__(self, ):
-        super().__init__()
 
         self.new_config_file = None
         self.file = "docker-compose.yaml"
 
     # creating a configuration file wi'response.csv'th a list of created apps and other details related with the app
-    def create_configuration_file(self, *args: ImageConfiguration) -> bool:
-        # getting the computer essential details
-        self.computer_essentials["os_type"]
-        # creating the file form the terminal
+    def create_configuration_file(self, **kwargs: ImageConfiguration) -> bool:
+
         try:
+            with open(self.file, 'w+') as data_file:
+                new_file = yaml.dump(kwargs, data_file)
+                return True
+        except:
+            # creating the file form the terminal
             self.new_config_file = os.system(f'touch {self.file}')
             return True
-        # if error encountered is an os Error
-        except OSError:
-            raise OSError
-        # if error encountered is not an os Error
-        # except != OSError:
-        #     return False
 
     # reading the file directly
     def directRead(self, _file): # takes in a path as an argument
@@ -132,3 +128,14 @@ class DatabaseOperations(ComputerDetails):
         # return a false response for other errors
         except:
             return False
+
+
+
+'''
+    Runnig the operations to execute docker
+'''
+
+
+class Composer:
+
+    
