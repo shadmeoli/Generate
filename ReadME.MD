@@ -12,3 +12,9 @@ pip install -r requirements.txt
 ```
 pip install --editable .
 ```
+
+##### Generate new config file withb
+```
+python gen.py new
+```
+
